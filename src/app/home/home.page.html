@@ -7,8 +7,17 @@
 </ion-header>
 
 <ion-content>
-  <div class="ion-padding">
-    The world is your oyster.
-    <p>If you get lost, the <a target="_blank" rel="noopener" href="https://ionicframework.com/docs/">docs</a> will be your guide.</p>
-  </div>
+    <ion-button (click)="get_products()">All Users</ion-button>
+    <ion-list>
+        <ul>
+            <li *ngFor="let product of products" >
+              -- id: {{product.id}}
+              -- fullname: {{product.fullname}}
+              -- phno: {{product.phno}}
+              -- emailid: {{product.emailid}}
+            </li>
+          </ul> 
+          <!-- <pre>Data Obtained is: {{ products | json }}</pre> -->
+    </ion-list>
+  
 </ion-content>
